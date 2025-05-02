@@ -34,7 +34,14 @@ const HeroSlider = () => {
 
   return (
     <div className="w-full relative rounded-xl md:rounded-3xl overflow-hidden">
-      <Carousel setApi={setApi} className="w-full ">
+      <Carousel
+        setApi={setApi}
+        opts={{
+          align: "start",
+          loop: true,
+        }}
+        className="w-full "
+      >
         <CarouselContent className="aspect-[900/360]">
           {Array.from({ length: 4 }).map((_, index) => (
             <CarouselItem key={index}>
