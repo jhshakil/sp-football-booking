@@ -13,7 +13,11 @@ import {
 import { useState } from "react";
 import Image from "next/image";
 
-const DatePicker = () => {
+type Props = {
+  className?: string;
+};
+
+const DatePicker = ({ className }: Props) => {
   const [date, setDate] = useState<Date>();
 
   return (
@@ -22,7 +26,8 @@ const DatePicker = () => {
         <Button
           variant={"outline"}
           className={cn(
-            "w-[260px] h-[52px] ps-4 pe-2 py-2 rounded-full justify-between text-left font-normal text-[#6A6A6A] shadow-md border border-[#F6F6F6]"
+            "w-[260px] h-[52px] ps-4 pe-2 py-2 rounded-full justify-between text-left font-normal text-[#6A6A6A] shadow-md border border-[#F6F6F6]",
+            className
           )}
         >
           {date ? format(date, "PPP") : <span>Pick a date</span>}
@@ -36,7 +41,7 @@ const DatePicker = () => {
           </div>
         </Button>
       </PopoverTrigger>
-      <PopoverContent className="w-auto p-0">
+      <PopoverContent className="w-auto p-0 bg-white">
         <Calendar
           mode="single"
           selected={date}
