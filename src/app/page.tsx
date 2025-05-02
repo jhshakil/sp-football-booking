@@ -1,9 +1,7 @@
-import { Button } from "@/components/ui/button";
-
 export default function Home() {
   return (
-    <div className="m-5">
-      <Button>Home</Button>
-    </div>
+    <main>
+      <h1>Home</h1>
+    </main>
   );
 }
