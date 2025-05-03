@@ -1,11 +1,14 @@
+"use client";
+
 import Image from "next/image";
 import { Button } from "../ui/button";
 import CommentCard from "./CommentCard";
-import React from "react";
+import React, { useState } from "react";
 import { Input } from "../ui/input";
 
 const allComments = [
   {
+    id: "c1",
     name: "Alex Mercer",
     text: "Looking forward to the game! What’s the final player count?",
     avatar: "",
@@ -29,6 +32,7 @@ const allComments = [
     ],
   },
   {
+    id: "c2",
     name: "Alex Mercer",
     text: "Looking forward to the game! What’s the final player count?",
     avatar: "",
@@ -45,6 +49,7 @@ const allComments = [
     ],
   },
   {
+    id: "c3",
     name: "Alex Mercer",
     text: "Looking forward to the game! What’s the final player count?",
     avatar: "",
@@ -63,6 +68,7 @@ const allComments = [
 ];
 
 const EventComment = () => {
+  const [activeReply, setActiveReply] = useState<string[]>(["c1", "c3"]);
   return (
     <div className="mt-5 p-5 bg-white rounded-[30px] flex flex-col gap-3 md:gap-6">
       {allComments?.map((comment, i) => (
@@ -83,6 +89,13 @@ const EventComment = () => {
                 variant={"link"}
                 size={"link"}
                 className="no-underline gap-2"
+                onClick={() =>
+                  setActiveReply((prev) =>
+                    prev.includes(comment.id)
+                      ? prev.filter((id) => id !== comment.id)
+                      : [...prev, comment.id]
+                  )
+                }
               >
                 <Image
                   width={26}
@@ -93,7 +106,7 @@ const EventComment = () => {
                 <p className="text-base text-[#808080] font-medium ">Reply</p>
               </Button>
             </div>
-            {comment?.reply?.length ? (
+            {activeReply.includes(comment.id) && comment?.reply?.length ? (
               <div className="relative mt-3 md:mt-6 ps-[28px] flex flex-col gap-3 before:absolute before:top-0 before:bottom-0 before:left-0 before:w-[1.2px] before:bg-[repeating-linear-gradient(to_bottom,theme(colors.border.DEFAULT)_0,theme(colors.border.DEFAULT)_8px,transparent_8px,transparent_16px)] content-['']">
                 {comment.reply.map((reply, j) => (
                   <React.Fragment key={`comment-reply-${reply.name}-${i}-${j}`}>
