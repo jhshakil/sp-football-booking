@@ -12,6 +12,8 @@ const badgeVariants = cva(
         default:
           "border-transparent bg-white text-primary [a&]:hover:bg-primary/90",
         tag: "border-transparent text-2xl h-[57px] rounded-full px-5 text-[#494949]",
+        "tag-sm":
+          "border-transparent text-xs h-[25px] rounded-full px-2.5 text-[#4A4A4A]",
         secondary:
           "border-transparent bg-secondary text-secondary [a&]:hover:bg-secondary/90",
         destructive:

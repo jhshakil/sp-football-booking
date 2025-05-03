@@ -27,7 +27,7 @@ const EventTitle = () => {
             variant={"outline"}
             className="rounded-full size-[42px]"
           >
-            <Heart fill="#494949" className="h-6 w-6" />
+            <Heart fill="#494949" stroke="transparent" className="size-6" />
           </Toggle>
           <EventOption />
         </div>
