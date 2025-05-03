@@ -158,12 +158,12 @@ const EventInfo = () => {
             </div>
           </div>
           <div className="flex items-center gap-4">
-            <Button className="w-[140px] h-[42px] bg-[#FDE8CD] hover:bg-[#FDE8CD]/80 text-base font-medium">
+            <Button className="w-[140px] h-[42px] bg-tertiary hover:bg-tertiary/80 text-base font-medium">
               Message
             </Button>
             <Button
               variant={"outline"}
-              className="w-[140px] h-[42px] text-base font-medium rounded-full border-[#FDE8CD] hover:border-[#FDE8CD]/80 text-[#FDE8CD]"
+              className="w-[140px] h-[42px] text-base font-medium rounded-full border-tertiary hover:border-tertiary/80 text-tertiary"
             >
               View profile
             </Button>

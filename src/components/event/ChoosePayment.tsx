@@ -34,7 +34,7 @@ const ChoosePayment = () => {
                 alt="payment icon"
               />
             </div>
-            <h3 className="text-[32px] text-[#FDE8CD] text-center font-bold">
+            <h3 className="text-[32px] text-tertiary text-center font-bold">
               Choose Payment Method
             </h3>
           </div>
@@ -45,7 +45,7 @@ const ChoosePayment = () => {
                 <Label htmlFor="bkash1">
                   <div>
                     <div className="flex items-center gap-2">
-                      <p className="text-[20px]">bKash</p>
+                      <p className="text-xl">bKash</p>
                       <Image
                         width={22}
                         height={22}
@@ -65,7 +65,7 @@ const ChoosePayment = () => {
                 <Label htmlFor="cash1">
                   <div>
                     <div className="flex items-center gap-2">
-                      <p className="text-[20px]">Cash</p>
+                      <p className="text-xl">Cash</p>
                       <Image
                         width={22}
                         height={22}

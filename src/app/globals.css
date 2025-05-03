@@ -9,6 +9,7 @@
   --color-accent: var(--accent);
   --color-active: var(--active);
   --color-secondary: var(--secondary);
+  --color-tertiary: var(--tertiary);
   --color-primary: var(--primary);
   --color-theme: var(--theme);
   --radius-sm: calc(var(--radius) - 4px);
@@ -41,6 +42,7 @@
   --primary: #171717;
   --theme: #63CFA0;
   --secondary: #4A4A4A;
+  --tertiary: #FDE8CD;
   --active: #DA6049;
   --accent: #34735F;
   --destructive: #AA3333;

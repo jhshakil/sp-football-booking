@@ -18,7 +18,7 @@ const EventOption = () => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <div>
+        <div className="cursor-pointer">
           <Image
             width={26}
             height={26}
