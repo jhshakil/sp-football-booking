@@ -39,7 +39,7 @@ const EventPlayer = () => {
   return (
     <div className="mt-6">
       <div className="flex justify-between gap-4 ">
-        <h2 className="text-[32px] font-bold">Players</h2>
+        <h2 className="text-2xl md:text-[32px] font-bold">Players</h2>
         <div className="flex items-center gap-1">
           <Image
             width={32}
@@ -47,7 +47,7 @@ const EventPlayer = () => {
             src={"/images/user-group.png"}
             alt="User icon"
           />
-          <p className="text-2xl">5/11</p>
+          <p className="text-xl md:text-2xl">5/11</p>
         </div>
       </div>
       <div className="mt-6 flex flex-col gap-3">
@@ -63,7 +63,7 @@ const EventPlayer = () => {
                   {player.avatarFallback}
                 </AvatarFallback>
               </Avatar>
-              <p className="text-2xl font-medium text-tertiary">
+              <p className="text-xl md:text-2xl font-medium text-tertiary">
                 {player.name}{" "}
                 {player.host ? (
                   <span className="text-base font-light">(Host)</span>
@@ -72,7 +72,7 @@ const EventPlayer = () => {
                 )}
               </p>
             </div>
-            <Button className="bg-white hover:bg-white/80 h-[50px] px-3 rounded-xl text-base font-medium">
+            <Button className="bg-white hover:bg-white/80 h-[50px] px-3 rounded-xl text-sm md:text-base font-medium">
               Message
             </Button>
           </div>

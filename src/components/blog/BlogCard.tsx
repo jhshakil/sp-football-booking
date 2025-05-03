@@ -136,7 +136,9 @@ const BlogCard = ({
             <p className="text-xs">{category}</p>
           </div>
         </div>
-        <h3 className="text-2xl font-medium text-accent mt-1">{title}</h3>
+        <h3 className="text-xl lg:text-2xl font-medium text-accent mt-1">
+          {title}
+        </h3>
         <div className="mt-1">
           <p className="text-sm">{date}</p>
           <div className="flex items-center gap-[5px]">

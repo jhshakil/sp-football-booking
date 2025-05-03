@@ -25,7 +25,7 @@ const GlobalSearch = ({ className }: Props) => {
         value={searchValue}
         onChange={(e) => setSearchValue(e.target.value)}
       />
-      <div className="flex bg-border p-[7.2px] rounded-full ml-2">
+      <div className="flex bg-border p-[7.2px] rounded-full ml-2 aspect-square">
         <Image
           width={21}
           height={21}

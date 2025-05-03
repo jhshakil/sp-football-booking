@@ -5,10 +5,10 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const EventInfo = () => {
   return (
-    <div className="[&>div]:py-15 [&>div]:border-b [&>div]:border-border [&>div>h2]:text-[32px] [&>div>h2]:font-bold">
+    <div className="[&>div]:py-10 md:[&>div]:py-15 [&>div]:border-b [&>div]:border-border [&>div>h2]:text-2xl md:[&>div>h2]:text-[32px] [&>div>h2]:font-bold">
       {/* event tag  */}
-      <div className="flex justify-between gap-10">
-        <div className="flex items-center gap-3">
+      <div className="flex flex-wrap justify-between gap-5 md:gap-10">
+        <div className="flex flex-wrap items-center gap-3">
           <Badge variant={"tag"} className="bg-[#E6F8F8]">
             Football
           </Badge>
@@ -35,7 +35,7 @@ const EventInfo = () => {
       {/* event about  */}
       <div>
         <h2>About this event</h2>
-        <p className="mt-10 max-w-[80%]">
+        <p className="mt-5 md:mt-10 max-w-full md:max-w-[80%]">
           Learn about the capital’s first beavers in 400 years from the Ealing
           Beaver project, make your own mushroom growing starter kit with urban
           agriculture experts, before joining Roma the Engineer to get into the
@@ -48,16 +48,18 @@ const EventInfo = () => {
       {/* event location  */}
       <div>
         <h2>Location</h2>
-        <div className="flex justify-between gap-4 max-w-[80%] mt-10">
+        <div className="flex justify-between gap-4 max-w-full md:max-w-[80%] mt-5 md:mt-10">
           <div>
-            <h3 className="text-2xl text-[#4E566B] font-bold">NDE Field</h3>
+            <h3 className="text-xl md:text-2xl text-[#4E566B] font-bold">
+              NDE Field
+            </h3>
             <p className="mt-1 text-secondary">
               Jean Baptiste Point du Sable Lake Shore Drive, Chicago, Illinois
             </p>
           </div>
           <Button
             variant={"outline"}
-            className="h-11 px-4 py-[15px] rounded-full border-[#4E566B] text-lg text-[#4E566B]"
+            className="h-11 px-4 py-[15px] rounded-full border-[#4E566B] text-base md:text-lg text-[#4E566B]"
           >
             Open maps
           </Button>
@@ -66,10 +68,10 @@ const EventInfo = () => {
       {/* Good to know  */}
       <div>
         <h2>Good to know</h2>
-        <div className="flex gap-3 mt-8">
+        <div className="flex flex-wrap gap-3 mt-4 md:mt-8">
           <div className="w-[300px] bg-[#DA6049] p-6 rounded-2xl text-white">
-            <h3 className="text-2xl font-bold">Highlights</h3>
-            <div className="mt-4 flex flex-col gap-[9px] text-lg font-medium">
+            <h3 className="text-xl md:text-2xl font-bold">Highlights</h3>
+            <div className="mt-4 flex flex-col gap-[9px] text-base md:text-lg font-medium">
               <div className="flex items-center gap-2">
                 <span>
                   <Image
@@ -90,7 +92,7 @@ const EventInfo = () => {
                     alt="calender icon"
                   />
                 </span>
-                <p className="text-lg">7.30 AM - 8.30 AM</p>
+                <p>7.30 AM - 8.30 AM</p>
               </div>
               <div className="flex items-center gap-2">
                 <span>
@@ -117,8 +119,10 @@ const EventInfo = () => {
             </div>
           </div>
           <div className="w-[523px] bg-[#34735F] p-6 pe-[34px] rounded-2xl text-white">
-            <h2 className="text-2xl font-bold">Refund & cancellation policy</h2>
-            <ul className="mt-4 list-disc list-inside text-lg font-medium">
+            <h2 className="text-xl md:text-2xl font-bold">
+              Refund & cancellation policy
+            </h2>
+            <ul className="mt-4 list-disc list-inside text-base md:text-lg font-medium">
               <li>Full refund if host cancels the game</li>
               <li>Full refund if you cancel 24+ hours in advance</li>
               <li>Full refund if game is cancelled due to low attendance</li>
@@ -139,15 +143,15 @@ const EventInfo = () => {
       {/* hosted by  */}
       <div className="border-none">
         <h2>Hosted by</h2>
-        <div className="mt-8 px-6 py-[27px] bg-[#4E566B] rounded-2xl text-white flex justify-between items-center gap-4 w-[720px]">
+        <div className="mt-8 px-6 py-[27px] bg-[#4E566B] rounded-2xl text-white flex flex-col md:flex-row justify-between items-center gap-4 w-full md:w-[720px]">
           <div className="flex gap-6 items-center">
             <Avatar className="size-[96px]">
               <AvatarImage src="/images/host-avatar.png" alt="host" />
               <AvatarFallback>HS</AvatarFallback>
             </Avatar>
             <div className="flex flex-col gap-1.5">
-              <h3 className="text-2xl">Alex Mercer</h3>
-              <div className="text-base">
+              <h3 className="text-xl md:text-2xl">Alex Mercer</h3>
+              <div className="text-sm md:text-base">
                 <p>
                   <span className="font-medium">23</span> activities hosted
                 </p>

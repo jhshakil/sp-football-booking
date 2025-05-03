@@ -79,18 +79,20 @@ const Blog = () => {
           align: "start",
         }}
       >
-        <div className="flex justify-between gap-3">
-          <h2 className="text-2xl font-bold">Other events you may like</h2>
+        <div className="flex justify-between gap-5">
+          <h2 className="text-xl md:text-2xl font-bold">
+            Other events you may like
+          </h2>
           <div className="flex gap-4 items-center">
-            <CarouselPrevious className="relative translate-0 left-0 top-0 bg-[#F4F5EF] border-0 size-12 [&>svg]:!size-6 " />
-            <CarouselNext className="relative translate-0 left-0 top-0 bg-[#F4F5EF] border-0 size-12 [&>svg]:!size-6" />
+            <CarouselPrevious className="relative translate-0 left-0 top-0 bg-[#F4F5EF] border-0 size-8 md:size-12 [&>svg]:!size-4 md:[&>svg]:!size-6" />
+            <CarouselNext className="relative translate-0 left-0 top-0 bg-[#F4F5EF] border-0 size-8 md:size-12 [&>svg]:!size-4 md:[&>svg]:!size-6" />
           </div>
         </div>
         <CarouselContent className="mt-3">
           {AllBlogs?.map((blog, i) => (
             <CarouselItem
               key={`blog-item-${blog.title}-${i}`}
-              className="md:basis-1/2 lg:basis-1/3"
+              className="md:basis-1/2 xl:!basis-1/3 basis-full"
             >
               <BlogCard {...blog} />
             </CarouselItem>

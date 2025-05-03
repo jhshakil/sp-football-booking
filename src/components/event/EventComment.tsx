@@ -64,9 +64,12 @@ const allComments = [
 
 const EventComment = () => {
   return (
-    <div className="mt-5 p-5 bg-white rounded-[30px] flex flex-col gap-6">
+    <div className="mt-5 p-5 bg-white rounded-[30px] flex flex-col gap-3 md:gap-6">
       {allComments?.map((comment, i) => (
-        <div key={`main-comment-${comment.name}-${i}`} className="mb-10">
+        <div
+          key={`main-comment-${comment.name}-${i}`}
+          className="mb-5 md:mb-10"
+        >
           <CommentCard
             name={comment.name}
             text={comment.text}
@@ -74,7 +77,7 @@ const EventComment = () => {
             avatarFallback={comment.avatarFallback}
             time={comment.time}
           />
-          <div className="mt-4">
+          <div className="mt-2 md:mt-4">
             <div>
               <Button
                 variant={"link"}
@@ -91,7 +94,7 @@ const EventComment = () => {
               </Button>
             </div>
             {comment?.reply?.length ? (
-              <div className="relative mt-6 ps-[28px] flex flex-col gap-3 before:absolute before:top-0 before:bottom-0 before:left-0 before:w-[1.2px] before:bg-[repeating-linear-gradient(to_bottom,theme(colors.border.DEFAULT)_0,theme(colors.border.DEFAULT)_8px,transparent_8px,transparent_16px)] content-['']">
+              <div className="relative mt-3 md:mt-6 ps-[28px] flex flex-col gap-3 before:absolute before:top-0 before:bottom-0 before:left-0 before:w-[1.2px] before:bg-[repeating-linear-gradient(to_bottom,theme(colors.border.DEFAULT)_0,theme(colors.border.DEFAULT)_8px,transparent_8px,transparent_16px)] content-['']">
                 {comment.reply.map((reply, j) => (
                   <React.Fragment key={`comment-reply-${reply.name}-${i}-${j}`}>
                     <CommentCard

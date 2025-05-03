@@ -8,7 +8,9 @@ const EventTitle = () => {
   return (
     <div>
       <div className="flex justify-between gap-3">
-        <h1 className="text-[48px] font-black">Road to the Football Finals</h1>
+        <h1 className="text-3xl md:text-[48px] font-black">
+          Road to the Football Finals
+        </h1>
         <div className="flex items-center gap-4">
           <Button
             variant={"outline"}
@@ -32,7 +34,7 @@ const EventTitle = () => {
           <EventOption />
         </div>
       </div>
-      <div className="mt-3 text-2xl text-secondary">
+      <div className="mt-3 text-xl md:text-2xl text-secondary">
         <p>Bashundhara Sports Complex</p>
         <p>Mar 14 from 7:30 PM - 9:30 PM</p>
       </div>

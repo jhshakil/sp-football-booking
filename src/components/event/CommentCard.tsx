@@ -36,12 +36,15 @@ const CommentCard = ({
       <div className="flex justify-between items-center ">
         <div className="flex items-center gap-[19px]">
           <Avatar
-            className={cn("size-10", reply ? "bg-accent" : "bg-tertiary")}
+            className={cn(
+              "size-7 md:size-10",
+              reply ? "bg-accent" : "bg-tertiary"
+            )}
           >
             <AvatarImage src={avatar} alt="@shadcn" />
             <AvatarFallback
               className={cn(
-                "text-lg font-bold",
+                "text-xs md:text-lg font-bold",
                 reply ? "text-tertiary" : "text-accent"
               )}
             >
@@ -50,7 +53,7 @@ const CommentCard = ({
           </Avatar>
           <p
             className={cn(
-              "text-2xl font-medium",
+              "text-lg md:text-2xl font-medium",
               reply ? "text-accent" : "text-tertiary"
             )}
           >
@@ -58,7 +61,12 @@ const CommentCard = ({
           </p>
         </div>
         <div className="flex items-center gap-[14px]">
-          <p className={cn("text-lg", reply ? "text-accent" : "text-tertiary")}>
+          <p
+            className={cn(
+              "text-sm md:text-lg",
+              reply ? "text-accent" : "text-tertiary"
+            )}
+          >
             {time}
           </p>
           <DropdownMenu>
@@ -82,7 +90,12 @@ const CommentCard = ({
           </DropdownMenu>
         </div>
       </div>
-      <p className={cn("text-xl mt-3", reply ? "text-primary" : "text-white")}>
+      <p
+        className={cn(
+          "text-base md:text-xl mt-3",
+          reply ? "text-primary" : "text-white"
+        )}
+      >
         {text}
       </p>
     </div>

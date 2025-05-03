@@ -13,12 +13,12 @@ export default function Home() {
       <div className="px-3 xl:px-10">
         <Hero />
       </div>
-      <div className="mt-5 md:mt-10 flex justify-between md:gap-15 px-3 xl:px-10 ">
-        <div className="min-w-[900px]">
+      <div className="mt-5 md:mt-10 flex flex-col xl:flex-row justify-between xl:gap-15 px-3 pb-10 xl:pb-0 xl:px-10 ">
+        <div className="flex-1">
           <EventTitle />
-          <div className="mt-[56px]">
+          <div className="mt-10 md:mt-[56px]">
             <Tabs defaultValue="info" className="gap-0">
-              <TabsList className="grid w-full grid-cols-3">
+              <TabsList className="grid w-full grid-cols-3 h-[50px] md:h-[81px]">
                 <TabsTrigger value="info">Info</TabsTrigger>
                 <TabsTrigger value="player">Player</TabsTrigger>
                 <TabsTrigger value="comments">Comments</TabsTrigger>
@@ -26,16 +26,16 @@ export default function Home() {
               <TabsContent value="info">
                 <EventInfo />
               </TabsContent>
-              <TabsContent value="player">
+              <TabsContent value="player" className="pb-16">
                 <EventPlayer />
               </TabsContent>
-              <TabsContent value="comments">
+              <TabsContent value="comments" className="pb-16">
                 <EventComment />
               </TabsContent>
             </Tabs>
           </div>
         </div>
-        <div className="w-full">
+        <div className="w-full md:min-w-[400px] max-w-[400px]">
           <JoinEvent />
         </div>
       </div>
