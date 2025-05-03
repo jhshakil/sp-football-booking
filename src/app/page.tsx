@@ -2,6 +2,7 @@ import EventComment from "@/components/event/EventComment";
 import EventInfo from "@/components/event/EventInfo";
 import EventPlayer from "@/components/event/EventPlayer";
 import EventTitle from "@/components/event/EventTitle";
+import JoinEvent from "@/components/event/JoinEvent";
 import Hero from "@/components/hero";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
@@ -31,7 +32,9 @@ export default function Home() {
             </Tabs>
           </div>
         </div>
-        <div className="w-full bg-green-600"></div>
+        <div className="w-full">
+          <JoinEvent />
+        </div>
       </div>
     </main>
   );
