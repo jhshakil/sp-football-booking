@@ -33,7 +33,7 @@ const CommentCard = ({
         reply ? "bg-tertiary" : "bg-accent"
       )}
     >
-      <div className="flex justify-between items-center ">
+      <div className="flex justify-between gap-2 items-center ">
         <div className="flex items-center gap-[19px]">
           <Avatar
             className={cn(

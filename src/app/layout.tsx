@@ -26,7 +26,7 @@ export default function RootLayout({
         <div className="bg-white">
           <Header />
         </div>
-        <div className="container mx-auto">{children}</div>
+        {children}
       </body>
     </html>
   );

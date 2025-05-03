@@ -72,7 +72,7 @@ const AllBlogs = [
 
 const Blog = () => {
   return (
-    <div className="p-3 xl:p-10">
+    <div className="container mx-auto p-3 xl:p-10">
       <Carousel
         className="w-full"
         opts={{
